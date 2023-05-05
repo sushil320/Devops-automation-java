@@ -5,7 +5,7 @@ pipeline{
         stage('BUILD MAVEN')
         steps{
             checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/sushilkumar320/Devops-automation-java']])
-            sh 'mvn clean install'
+             sh 'cd /home/ubuntu/Devops-automation-java && mvn clean package'
         }
     }
     
