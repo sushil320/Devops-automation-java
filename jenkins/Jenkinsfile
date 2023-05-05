@@ -4,7 +4,7 @@ pipeline {
          maven 'maven_3_5_0'
     }
     stages {
-        stage('BUILD MAVEN')
+        stage('BUILD MAVEN') {
         steps {
             checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/sushilkumar320/Devops-automation-java']])
              //sh 'cd /home/ubuntu/Devops-automation-java'
